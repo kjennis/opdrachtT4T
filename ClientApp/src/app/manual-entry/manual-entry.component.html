@@ -1,0 +1,31 @@
+<h1>Manual Entry</h1>
+
+<!--
+<form>
+    Title<br>
+    <input type="text" name="Title" value="" formControlName="title">
+    <br>
+    Duration(min):<br>
+    <input type="number" name="Duration" value="" formControlName="duration">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+-->
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" required
+      [(ngModel)]="talk.title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Duration(min)</label>
+      <input type="number" class="form-control" id="duration" required
+      [(ngModel)]="talk.duration" name="duration">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>

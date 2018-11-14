@@ -1,0 +1,22 @@
+<h1>Talks overview</h1>
+
+<p *ngIf="!tracks"><em>Loading...</em></p>
+<div *ngFor="let track of tracks">
+    <h2>{{ track.title }}</h2>
+<table class='table' *ngIf="tracks">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Title</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let talk of track.talks">
+      <td>{{ talk.time }}</td>
+      <td>{{ talk.title }}</td>
+      <td>{{ talk.duration }} min</td>
+    </tr>
+  </tbody>
+</table>
+</div>
